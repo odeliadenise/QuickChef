@@ -1,0 +1,72 @@
+HTML
+  Build the structure with proper semantic elements.
+  Include placeholders where dynamic content (like search results or recipe details) will appear.
+
+Plan for Writing This HTML
+  Step 1: Basic Structure
+    Create the HTML document:
+    Include the <!DOCTYPE html> declaration.
+    Add the <html>, <head>, and <body> tags.
+    Define the character encoding, viewport settings, and page title.
+  Step 2: Link External Resources
+    Include the Font Awesome CDN for icons.
+    Link the external stylesheet (style.css) in the <head> section.
+  Step 3: Build the Main Container
+    Add a <div class="container"> as the main wrapper.
+    Inside the container, structure the following sections.
+  Step 4: Add the Meal Search Section
+    Create a <div class="meal-search">:
+    Add a title using <h2> and a quote block using <blockquote> and <cite>.
+    Include a search box with:
+    <input> for text input.
+    <button> with an icon for the search action.
+  Step 5: Add the Meal Results Section
+    Create a <div class="meal-result">:
+    Add a title (<h2>) for the results section.
+    Add an empty <div id="meal"> to act as a placeholder for dynamic meal items.
+  Step 6: Add the Meal Details Section
+    Create a <div class="meal-details">:
+    Include a close button (<button>) with an icon.
+    Add a <div class="meal-details-content"> for detailed meal information, with comments indicating placeholders.
+
+CSS
+  Style the page to ensure it's visually appealing and user-friendly.
+  Make it responsive for different devices using media queries.
+
+Plan for Writing CSS
+General Styles
+  Global Reset:
+    * resets padding, margin, and ensures consistent box-sizing.
+    :root defines CSS variables (--tenne-tawny and its dark variant) for easy theme management.
+  Body Styling:
+    Sets base typography using a clean, modern font (Poppins), lightweight font-weight, and responsive line height.
+Reusable Components
+  Button Styles (.btn):
+    Unified font and base cursor styles.
+  Typography (.title, .text):
+    Adjusts font size and spacing for headers and texts.
+Container and Layout
+  General Layout:
+    .container ensures a minimum height to fill the viewport.
+    .meal-wrapper centralizes content with padding and a maximum width for responsiveness.
+  Sections (.meal-search, .meal-result, .meal-details):
+    Clear segmentation of functionality with spacing, margin, and text alignment.
+Form and Input Elements
+  Search Box:
+    .search-control and .search-btn styled for a cohesive input-button look.
+    Pseudo-classes (::placeholder) customize placeholder text appearance.
+Meal Items
+  Styling for Results:
+    .meal-item uses rounded corners and shadow effects for a card-style layout.
+    .meal-name focuses on text and button styling for recipe links.
+Modal (Meal Details)
+  Details Section:
+    .meal-details uses fixed positioning and transforms to create a centered modal view.
+    Scroll customization enhances user experience.
+Utilities and States
+    .showRecipe handles dynamic display changes.
+    .notFound styles fallback text for no results.
+Media Queries
+  Ensures responsiveness at breakpoints with adjustments for grid layout and modal width.
+
+Note: the design may be changed according to any recommendations or needs!
