@@ -8,6 +8,7 @@ searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
+    mealDetailsContent.parentElement.classList.remove('showRecipe);
 });
 
 
@@ -21,3 +22,4 @@ function getMealRecipe(e){
         .then(data => mealRecipeModal(data.meals));
     }
 }
+
