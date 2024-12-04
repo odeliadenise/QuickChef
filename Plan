@@ -1,5 +1,18 @@
+GOAL: 
+A website to query recipes based on the ingredients users have
+
 PLAN:
-1. Set the goal
-2. Assign tasks
-3. Wait for Researcher's result
-4. Wait for the Technical's trial
+- First meeting: discuss the elements needed in the website
+- Assign the tasks to each members
+- Set milestones
+- Second meeting: Take a group picture and another discussion to update about the progress
+
+Meetings:
+1. November 12th 2024
+2. November 27th 2024
+
+Milestones:
+Week 2: - Finish research for recipes, create basic HTML template, and determine the color or theme of the display
+        - Define sections for Home, Ingredient Input, and Recipe Display pages; Add placeholders for recipe details (image, ingredients, instructions)
+
+Week 4: - Continue the code for the HTML file and starting to match the web layout with the themes or designs
