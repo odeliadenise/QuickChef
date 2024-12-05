@@ -88,6 +88,8 @@ body {
     cursor: pointer; /* Pointer cursor on hover */
     transition: all 0.3s ease; /* Smooth hover transition */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Depth with shadow */
+    align-items: center;
+    justify-content: center;
 }
 
 .search-btn:hover {
@@ -140,44 +142,63 @@ body {
 .meal-details {
     display: none; /* Hide modal by default */
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay background */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #fff;
+    border-radius: 1rem;
+    background: orange;
+    -webkit-transform: 1rem;
+    -moz-transform: 1rem;
+    -ms-transform: 1rem;
+    -o-transform: 1rem;
+    width: 90%;
+    height: 90%;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow-y:  scroll;
+    padding: 2rem 0;
 }
 
+
 .showRecipe {
-    display: flex; /* Show modal when this class is added */
+    display: block; /* Show modal when this class is added */
 }
 
 /* Modal Content */
 .meal-details-content {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    margin: 2rem;
+    padding: 1rem;
 
     /* Enable vertical scrolling */
     max-height: 80vh; /* Set a maximum height for the modal */
     overflow-y: auto; /* Add vertical scrollbar if content overflows */
 }
 
-/* Style the scrollbar (optional) */
-.meal-details-content::-webkit-scrollbar {
-    width: 8px;
+.meal-detail-content p:not(.recipe-category){
+    padding: 1rem 0;
 }
 
-.meal-details-content::-webkit-scrollbar-thumb {
-    background: #ccc; /* Scrollbar thumb color */
-    border-radius: 8px;
+
+/* Style the scrollbar (optional) */
+.meal-details-content::-webkit-scrollbar {
+    width: 10px;
 }
+
+.meal-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
 
 .meal-details-content::-webkit-scrollbar-thumb:hover {
     background: #999; /* Darker color on hover */
@@ -207,7 +228,7 @@ body {
     color: #555;
     line-height: 1.6;
     margin-bottom: 1rem;
-    text-align: left;
+    text-align: center;
 }
 
 .recipe-meal-img img {
@@ -233,19 +254,24 @@ body {
 }
 
 /* Close Button */
-.recipe-close-btn {
+.recipe-close-btn{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
     background: #fff;
-    color: #333;
     border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
+    width: 35px;
+    height: 35px;
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
 }
 
 .recipe-close-btn:hover {
@@ -253,6 +279,24 @@ body {
 }
 
 /* Responsive Design */
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 700px;
+    }
+}
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
 @media (max-width: 768px) {
     .container {
         padding: 1.5rem;
@@ -260,9 +304,13 @@ body {
     }
 
     .meal-search-box {
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
         flex-direction: column; /* Stack input and button vertically */
         gap: 1rem;
     }
+
 
     .search-control, .search-btn {
         width: 100%; /* Full-width input and button for mobile */
