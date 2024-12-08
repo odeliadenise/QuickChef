@@ -9,7 +9,7 @@
 
 /* Body Background */
 body {
-    background-image: url('simple.png'); /* Ensure correct image path */
+    background-image: url('simple.png'); /* Update path as needed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,8 +17,8 @@ body {
     color: #333;
     min-height: 100vh;
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 /* Main Container */
@@ -26,18 +26,18 @@ body {
     background-color: #fff;
     border-radius: 16px;
     padding: 2rem;
-    max-width: 800px; /* Updated for a larger layout */
+    max-width: 800px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
 /* Title */
 .container h1 {
-    font-size: 2.4rem; /* Slightly larger title */
+    font-size: 2.4rem;
     margin-bottom: 1.2rem;
-    color: #222; /* Darker text for better contrast */
-    font-weight: 600; /* Bolder title for emphasis */
+    color: #222;
+    font-weight: 600;
 }
 
 /* Quote */
@@ -46,281 +46,237 @@ body {
     font-size: 1rem;
     color: #555;
     margin-bottom: 1.8rem;
-    line-height: 1.6; /* Better line spacing for readability */
+    line-height: 1.6;
 }
 
 /* Search Section */
 .meal-search-box {
-    display: flex; /* Align input and button side by side */
+    display: flex;
     align-items: center;
-    gap: 0.5rem; /* Add space between input and button */
-    margin: 1.5rem 0; /* Margin around the search box */
-    padding: 0.5rem; /* Inner padding for a cleaner look */
-    border: 2px solid #ccc; /* Light border for clarity */
-    border-radius: 12px; /* Rounded corners for a modern look */
-    background-color: #f9f9f9; /* Subtle background to distinguish the form */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .search-control {
-    flex-grow: 1; /* Ensures the input field takes up available space */
-    padding: 0.8rem 1rem; /* Comfortable padding for typing */
-    font-size: 1rem; /* Readable font size */
-    border: none; /* Removes default border */
-    border-radius: 8px; /* Rounded corners */
-    outline: none; /* Removes outline on focus */
-    background-color: #fff; /* Clean white background */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight inset shadow */
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-control::placeholder {
-    color: #888; /* Subtle color for placeholder text */
-    font-style: italic; /* Style the placeholder text */
+    color: #888;
+    font-style: italic;
 }
 
 .search-btn {
     background: #333;
     color: #fff;
-    padding: 0.8rem 1.2rem; /* Comfortable size for clicking */
-    font-size: 1rem; /* Readable button text */
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Rounded corners for consistency */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: all 0.3s ease; /* Smooth hover transition */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Depth with shadow */
-    align-items: center;
-    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .search-btn:hover {
     background: #555;
 }
 
-.search-btn i {
-    margin-left: 0.3rem; /* Space between text and icon */
+/* Meal Grid */
+#meal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
+    gap: 3rem; /* Space between cards */
+    margin-top: 2rem;
+    padding: 1rem;
 }
 
-/* Meal Item Display */
 .meal-item {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start; /* Keep content at the top */
     align-items: center;
-    padding: 1rem;
+    padding: 1.2rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
+    position: relative; /* Enable absolute positioning for child elements */
+    height: 110%; /* Make the height consistent */
 }
 
 .meal-img img {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .meal-name h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #333;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .recipe-btn {
+    position: absolute; /* Fix button at the bottom */
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     text-decoration: none;
-    background: #ff6347; /* Bright color for CTA */
+    background: #ff6347;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 8px;
+    text-align: center;
     transition: background 0.3s ease;
+    width: calc(100% - 2rem); /* Fit button inside the box padding */
+    box-sizing: border-box;
 }
 
 .recipe-btn:hover {
     background: #e5533d;
 }
 
-/* Meal Details Modal */
+/* Modal Background */
 .meal-details {
-    display: none; /* Hide modal by default */
+    display: none; /* Hidden by default */
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    color: #fff;
-    border-radius: 1rem;
-    background: orange;
-    -webkit-transform: 1rem;
-    -moz-transform: 1rem;
-    -ms-transform: 1rem;
-    -o-transform: 1rem;
-    width: 90%;
-    height: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dim background */
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    overflow-y:  scroll;
-    padding: 2rem 0;
+    z-index: 1000; /* Ensure above other content */
 }
 
-
+/* Show Modal */
 .showRecipe {
-    display: block; /* Show modal when this class is added */
+    display: flex; /* Display modal */
 }
 
 /* Modal Content */
 .meal-details-content {
-    margin: 2rem;
-    padding: 1rem;
-
-    /* Enable vertical scrolling */
-    max-height: 80vh; /* Set a maximum height for the modal */
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px; /* Limit width */
+    max-height: 90%; /* Prevent overflow */
+    overflow-y: auto; /* Enable scrolling for overflowing content */
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.meal-detail-content p:not(.recipe-category){
-    padding: 1rem 0;
+/* Modal Close Button */
+.recipe-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
+.recipe-close-btn:hover {
+    background: #e5533d;
+}
 
-/* Style the scrollbar (optional) */
+/* Modal Scrollbar */
 .meal-details-content::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
-.meal-details::-webkit-scrollbar-thumb{
-    background: #f0f0f0;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
+.meal-details-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 8px;
 }
-
 
 .meal-details-content::-webkit-scrollbar-thumb:hover {
-    background: #999; /* Darker color on hover */
+    background: #999;
 }
 
+/* Title in Modal */
 .recipe-title {
     font-size: 2rem;
-    color: #333;
+    color: #ff6347;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
-.recipe-category {
-    font-size: 1.2rem;
-    color: #777;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
+/* Instructions */
 .recipe-instruct h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     color: #333;
 }
 
 .recipe-instruct p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
+/* Recipe Image */
 .recipe-meal-img img {
     width: 100%;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
+/* Recipe Link */
 .recipe-link a {
     display: inline-block;
-    text-decoration: none;
-    background: #333;
+    background: #ff6347;
     color: #fff;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 8px;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .recipe-link a:hover {
-    background: #555;
-}
-
-/* Close Button */
-.recipe-close-btn{
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    font-size: 1.8rem;
-    background: #fff;
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 40%;
-    -webkit-border-radius: 40%;
-    -moz-border-radius: 40%;
-    -ms-border-radius: 40%;
-    -o-border-radius: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
-}
-
-.recipe-close-btn:hover {
-    background: #f4f4f4;
+    background: #e5533d;
 }
 
 /* Responsive Design */
-@media screen and (min-width: 768px){
-    #meal{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .meal-item{
-        margin: 0;
-    }
-    .meal-details{
-        width: 700px;
-    }
-}
-@media screen and (min-width: 992px){
-    #meal{
-        grid-template-columns: repeat(3,1fr);
-    }
-} 
-@media (max-width: 768px) {
-    .container {
-        padding: 1.5rem;
-        max-width: 90%; /* Expand width slightly on smaller screens */
-    }
-
+@media screen and (max-width: 768px) {
     .meal-search-box {
-        width: 540px;
-        margin-left: auto;
-        margin-right: auto;
-        flex-direction: column; /* Stack input and button vertically */
+        flex-direction: column;
         gap: 1rem;
     }
 
-
     .search-control, .search-btn {
-        width: 100%; /* Full-width input and button for mobile */
+        width: 100%; /* Full-width for smaller screens */
     }
+}
 
-    .meal-details-content {
-        padding: 1.5rem;
-    }
-
-    .recipe-title {
-        font-size: 1.8rem;
+@media screen and (min-width: 992px) {
+    #meal {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
