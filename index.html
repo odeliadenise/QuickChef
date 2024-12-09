@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find Meal For Your Ingredients</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,45 +26,24 @@
         </div>
       </div>
 
-      <div class="meal-result">
-        <h2 class="title">Your Search Results:</h2>
-        <div id="meal">
-          <!-- Show Meal 1 -->
-           <!--<div class = "meal-item">
-                 <div class = "meal-img">
-               <img src = "Nasi-goreng.jpg" alt ="Nasgor">
-            </div>
-            <div class = "meal-name">
-                <h3>Nasi Goreng</h3>
-                <a href = "#" class = "recipe-btn">View Recipe</a>
-            </div>
-           </div>-->
-           <!-- End of Show meal 1-->
-        </div>
+      <!-- Search Results -->
+    <section class="meal-result">
+      <h2 class="title">Your Search Results:</h2>
+      <div id="meal" role="list" aria-live="polite"></div>
+      <div id="error-message" role="alert" style="display: none; color: red;">
+        <p>No meals found. Please try again with a different ingredient.</p>
       </div>
+      <div id="loading" style="display: none;" role="status" aria-live="polite">
+        <p>Loading...</p>
+      </div>
+    </section>
 
       <div class="meal-details">
         <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
           <i class="fas fa-times"></i>
         </button>
-        <!-- meal details 1 -->
-         <!--
-        <div class="meal-details-content">
-            <h2 class = "recipe-title">Meals Name Here</h2>
-            <p class = "recipe-category">Category Name</p>
-            <div class = "recipe-instruct">
-                <h3>Instructions:</h3>
-                <p>Step 1: Cook Rice</p>
-                <p>Step 2: Make Nasi Goreng</p>
-            </div>
-            <div class = "recipe-meal-img">
-                <img src = "Nasi-goreng.jpg" alt="">
-            </div>
-            <div class = "recipe-link">
-                <a href = "#" target = "https://youtu.be/Js9FXCkn798?si=lldCLxznyEO354uf">Watch Tutorial</a>
-            </div>
-            <!-- End of Meal Details 1 -->
-        </div>
+
+        <div class="meal-details-content"></div>
       </div>
     </div>
   </div>
