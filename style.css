@@ -94,6 +94,14 @@ body {
     background: #555;
 }
 
+#error-message {
+    display: none; /* Hidden by default */
+    color: red;
+    font-style: italic; /* Makes the text italic */
+    font-size: 1rem; /* Adjust size as needed */
+    margin-top: 1rem; /* Add some spacing */
+}
+
 /* Meal Grid */
 #meal {
     display: grid;
