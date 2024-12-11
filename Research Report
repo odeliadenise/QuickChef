@@ -1,1 +1,44 @@
-Hello, This is the Research Report :>
+QuickChef Research Report
+
+User Research
+To understand users’ cooking needs, preferred cuisines, dietary preferences, and any specific food challenges, we first conducted a research with a few targeted questions in mind. 
+The questions are as listed below : 
+“What cuisine(s) do users cook most often?”
+“Do users follow any dietary restrictions? (e.g., gluten-free, vegan)”
+“What frustrates users about using recipe apps?”
+“Do users enjoy cooking with multiple ingredients or do they prefer quick and simple meals with one or two ingredients?”
+With these questions, we then start gathering data of what users would typically want and need and implement them into our website. After the whole research we acknowledge what we can do differ from other recipe apps or websites, all while maintaining uniqueness and as well as accessibility.
+
+Analyzing Data and Compile User Needs
+
+Data and Insights
+
+Most Preferred Cuisines: Italian (30%), Mexican (25%), and Asian cuisines (20%), most users favor globally popular options.
+Top Dietary Preferences: Around 35% of users follow specific diets, with vegan and gluten-free options in demand. Vegan (20%), Gluten-Free (15%), Dairy-Free (10%).
+Common Challenges: "Finding recipes with limited ingredients," "Time constraints," "Lack of dietary-specific recipes," “Prefer quick, easy-to-prepare meals.”
+
+Health Conditions Analyzed:
+Diabetes: Focus on low-sugar recipes with balanced carbohydrates.
+Heart Health: Emphasize low-sodium, high-fiber recipes rich in fruits, vegetables, and whole grains.
+Gluten Intolerance: Gluten-free recipe options that include natural grains like quinoa and rice.
+
+What We Can Do:
+Incorporate Popular Cuisines: Highlight recipe options in Italian, Mexican, Asian and other global categories.
+Include Dietary Filters: Add filters for vegan, gluten-free, and dairy-free diets.
+Add Health-specific Filters: Also add   “Low Sugar,” “Heart-Healthy,” and “Gluten-Free” filters.
+Quick Meal Suggestions: Implement a “Quick Meals” filter for recipes that can be made in under 30 minutes.
+Recipe Tips: Include tips in relevant recipes, e.g., “Add fiber-rich vegetables for heart health” or “Choose lean proteins for balanced blood sugar.” 
+Alternative Ingredients: Include a few other ingredient options to increase flexibility for the recipes. 
+Collaborate with Chefs: Feature special cuisines made by renowned chefs around the world for even better user experience.
+
+Competing APPs or Websites Research
+Apps Reviewed: Yummly, AllRecipes, and Tasty
+
+Key Takeaways:
+Feature Strengths: Yummly’s ingredient-based search and dietary filters are user favorites.
+User Frustrations: Users often mention poor dietary filtering in AllRecipes and lack of personalized recipe suggestions in Tasty.
+
+Opportunities for QuickChef
+Position QuickChef as a health-friendly, ingredient-based app with detailed dietary filters and recipe recommendations.
+
+Next we will conduct the technical, design and aesthetic approach.
